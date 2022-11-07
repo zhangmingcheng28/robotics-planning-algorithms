@@ -2,7 +2,8 @@ import numpy as np
 import time
 import math
 import matplotlib.pyplot as plt
-
+import matplotlib
+matplotlib.use('TkAgg')
 robot = [0,0]
 r_robot = 0.1
 
@@ -124,7 +125,7 @@ for i in range(10000):
 		obs_init[j][1] += obs_vel[j][1]
 #		print([temp[0], obs_init[j][0]])
 #		print([temp[1], obs_init[j][1]])
-		print("AA")
+		#print("AA")
 		#ax.plot([temp[0], obs_init[j][0]], [temp[1], obs_init[j][1]], 'b-')
 	circle1 = plt.Circle((goal[0], goal[1]), r_obs[j] * 3, color='g')
 	ax.add_patch(circle1)
